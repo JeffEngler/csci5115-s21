@@ -1,5 +1,6 @@
 package io.moonen.charles.greengrocery.ui.receipt_scorecard;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +45,7 @@ public class ReceiptScorecardFragment extends Fragment implements View.OnClickLi
     @Override
     public void onViewCreated(View v, Bundle savedInstanceState){
         super.onViewCreated(v, savedInstanceState);
+        v.setBackgroundColor(Color.WHITE);
         //recycler View
         rvReceiptScorecard = (RecyclerView) getView().findViewById(R.id.rvReceiptScorecard);
         rvReceiptScorecard.setHasFixedSize(true);

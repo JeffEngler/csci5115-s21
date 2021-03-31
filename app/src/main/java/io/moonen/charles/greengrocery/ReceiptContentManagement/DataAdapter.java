@@ -34,11 +34,11 @@ public class DataAdapter {
             c++; //increment category label
         }
         //add overall sustainability grade
-        grades.add(new Grade("Price", currRow[currRow.length-1], ""));
+        grades.add(new Grade("Price", currRow[currRow.length-2], ""));
 
         //store price and quality
-        String price = currRow[currRow.length-3];
-        String quality = currRow[currRow.length-2];
+        String price = currRow[currRow.length-4];
+        String quality = currRow[currRow.length-3];
 
         //create product
         Product newProduct = new Product(product_name, product_brand, price, quality, grades);

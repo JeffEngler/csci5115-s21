@@ -17,6 +17,7 @@
             android:id="@+id/addItemButton"
             android:layout_width="150dp"
             android:layout_height="37dp"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="12dp"
             android:backgroundTint="#47525E"
             android:drawableLeft="@android:drawable/ic_input_add"
@@ -27,6 +28,7 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/scoreMyReceiptButton"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
         <FrameLayout
@@ -76,8 +78,8 @@
 
         <TextView
             android:id="@+id/bottomBar"
-            android:layout_width="0dp"
-            android:layout_height="143dp"
+            android:layout_width="410dp"
+            android:layout_height="135dp"
             android:background="#FFFFFF"
             android:backgroundTint="#B1EFCC"
             android:text=""
@@ -100,10 +102,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--Receipt Contents-->
-
-    <!-- Fragment Frame -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

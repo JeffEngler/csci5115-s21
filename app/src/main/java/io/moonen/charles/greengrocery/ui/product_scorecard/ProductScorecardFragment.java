@@ -1,5 +1,6 @@
 package io.moonen.charles.greengrocery.ui.product_scorecard;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,29 +20,33 @@ import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 
 //PRODUCT SCORECARD FRAGMENT
 public class ProductScorecardFragment extends Fragment {
-    private int productPosition=1; //position of product that was clicked on
+    //position of product that was clicked on
+    private int productPosition; //1
     //number of scanned receipt
     private int receipt_num;
-    public ProductScorecardFragment() {
+    public ProductScorecardFragment() { //int scanned_receipt_num, int currPosition
         productPosition = 1;
         receipt_num = 1;
+        //this.receipt_num = scanned_receipt_num;
+        //this.productPosition = currPosition;
     }
 
     public ProductScorecardFragment(int scanned_receipt_num, int currPosition){  //pass in position of clicked product
         this.receipt_num = scanned_receipt_num;
         this.productPosition = currPosition;
     }
-
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_product_scorecard, container, false);
+        //root.setBackgroundColor(Color.WHITE);
 
         return root;
     }
     @Override
     public void onViewCreated(View v, Bundle savedInstanceState){
         super.onViewCreated(v, savedInstanceState);
-
+        v.setBackgroundColor(Color.WHITE);
         //get receipt data
         MainActivity activity = (MainActivity) getActivity();
         Receipt receipt = activity.getReceiptData(receipt_num);
