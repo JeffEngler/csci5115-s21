@@ -46,7 +46,7 @@ public class PointsEarnedFragment extends Fragment implements View.OnClickListen
         MainActivity activity = (MainActivity) getActivity();
         Receipt receipt = activity.getReceiptData(receipt_num);
         //String pts = receipt.getOverallPoints();
-        String pts = "1000";
+        String pts = "535";
 
         //set points value
         TextView pointsEarned = v.findViewById(R.id.pointsEarned);
