@@ -75,11 +75,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
                 }
             });
-
-
-
         }
-
     }
 
     // Create new views (invoked by the layout manager)
@@ -105,8 +101,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         if (plant.fullyGrown()) {
             viewHolder.button.setClickable(false);
-            viewHolder.button.setBackgroundColor(Color.GRAY);
-            viewHolder.button.setTextColor(Color.WHITE);
+            //viewHolder.button.setBackgroundColor(Color.GRAY);
+            viewHolder.button.setTextColor(Color.GRAY);
         }
 
         viewHolder.imageView.

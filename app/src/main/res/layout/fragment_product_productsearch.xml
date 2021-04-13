@@ -41,6 +41,7 @@
         android:backgroundTint="#13CE66"
         android:onClick="nav_product_scorecard"
         android:text="@string/correct"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView3" />
@@ -54,6 +55,7 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="#13CE66"
         android:text="Re-enter Product"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/correct_product" />

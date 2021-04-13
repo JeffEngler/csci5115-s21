@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import io.moonen.charles.greengrocery.ReceiptContentManagement.Product;
@@ -17,11 +20,11 @@ import io.moonen.charles.greengrocery.ui.product_scorecard.ProductScorecardFragm
 
 //RecycleView Adapter
 public class RVAdapter_ReceiptScorecard extends RecyclerView.Adapter<RVAdapter_ReceiptScorecard.ProductViewHolder> {
-    private Context mCtx;
+    private FragmentActivity mCtx;
     private Receipt receipt;
 
     //getting the context and product list with constructor
-    public RVAdapter_ReceiptScorecard(Context mCtx, Receipt receipt) {
+    public RVAdapter_ReceiptScorecard(FragmentActivity mCtx, Receipt receipt) {
         this.mCtx = mCtx;
         this.receipt = receipt;
     }
@@ -30,7 +33,7 @@ public class RVAdapter_ReceiptScorecard extends RecyclerView.Adapter<RVAdapter_R
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.layout_receipt_scorecard, null);
+        View view = inflater.inflate(R.layout.layout_receipt_scorecard, parent, false);
 
         return new ProductViewHolder(view);
     }
@@ -62,11 +65,22 @@ public class RVAdapter_ReceiptScorecard extends RecyclerView.Adapter<RVAdapter_R
         public void onClick(View v) {
             //test
             //Toast.makeText(v.getContext(), "First Fragment", Toast.LENGTH_LONG).show();
-
+            Fragment fragment = null;
             int currentPosition = getAdapterPosition();  //pass in position of clicked product
-            ((FragmentActivity) v.getContext()).getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, new ProductScorecardFragment(receipt.getNumber(), currentPosition))
-                    .commit();
+            if(v.getId()==R.id.productGradeButton){
+                fragment = new ProductScorecardFragment(receipt.getNumber(), currentPosition);
+                replaceFrag(fragment);
+            }
+//            int currentPosition = getAdapterPosition();  //pass in position of clicked product
+//            ((FragmentActivity) v.getContext()).getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.fragment_container, new ProductScorecardFragment(receipt.getNumber(), currentPosition))
+//                    .commit();
+        }
+        public void replaceFrag(Fragment frag){
+            FragmentTransaction transaction = mCtx.getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, frag);
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
     }
 }
