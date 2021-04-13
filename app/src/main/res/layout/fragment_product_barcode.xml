@@ -35,9 +35,9 @@
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="560dp"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="#47525E"
+        android:layout_marginTop="560dp"
+        android:backgroundTint="#13CE66"
         android:text="@string/correct" />
 
     <Button
@@ -45,9 +45,9 @@
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="640dp"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="#47525E"
+        android:layout_marginTop="640dp"
+        android:backgroundTint="#13CE66"
         android:text="Re-scan Barcode" />
 
     <ImageView

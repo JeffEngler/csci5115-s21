@@ -50,7 +50,7 @@
         android:id="@+id/growButton"
         android:layout_width="241dp"
         android:layout_height="62dp"
-        android:backgroundTint="#47525E"
+        android:backgroundTint="#13CE66"
         android:onClick="nav_garden"
         android:text="Return to Garden"
         android:textAllCaps="false"

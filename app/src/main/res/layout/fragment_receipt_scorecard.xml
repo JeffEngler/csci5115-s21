@@ -99,7 +99,7 @@
         android:layout_width="224dp"
         android:layout_height="47dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#47525E"
+        android:backgroundTint="#13CE66"
         android:onClick="nav_points_earned"
         android:text="Next"
         android:textColor="#FFFFFF"

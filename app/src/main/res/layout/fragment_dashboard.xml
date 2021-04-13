@@ -22,7 +22,7 @@
             android:layout_width="350dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
-            android:backgroundTint="#989cac"
+            android:backgroundTint="#13CE66"
             android:stateListAnimator="@null"
             android:text="@string/grow_your_garden"
             android:textColor="@color/white"
