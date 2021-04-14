@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("points", 535);
+        editor.putInt("points", 50);
 
         Gson gson = new Gson();
         String jsonText = gson.toJson(plants);
