@@ -3,23 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_garden">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="io.moonen.charles.greengrocery.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_settings"
+        android:name="io.moonen.charles.greengrocery.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_garden"
         android:name="io.moonen.charles.greengrocery.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_garden"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="io.moonen.charles.greengrocery.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_rscan"
+        android:name="io.moonen.charles.greengrocery.ui.receipt_scan_home.ReceiptScanHomeFragment"
+        android:label="@string/title_rscan"
+        tools:layout="@layout/fragment_receipt_scan_home" />
+
+    <fragment
+        android:id="@+id/navigation_rscore"
+        android:name="io.moonen.charles.greengrocery.ui.receipt_scorecard.ReceiptScorecardFragment"
+        android:label="@string/title_rscan"
+        tools:layout="@layout/fragment_receipt_scorecard" />
+
+    <fragment
+        android:id="@+id/navigation_points_earned"
+        android:name="io.moonen.charles.greengrocery.ui.points_earned.PointsEarnedFragment"
+        android:label="@string/title_rscan"
+        tools:layout="@layout/fragment_points_earned" />
+
+    <fragment
+        android:id="@+id/navigation_pscan"
+        android:name="io.moonen.charles.greengrocery.ui.pscan.PScanFragment"
+        android:label="@string/title_pscan"
+        tools:layout="@layout/fragment_productscansearch" />
+
+    <fragment
+        android:id="@+id/navigation_product_scorecard"
+        android:name="io.moonen.charles.greengrocery.ui.product_scorecard.ProductScorecardFragment"
+        android:label="@string/title_pscan"
+        tools:layout="@layout/fragment_product_scorecard" />
+
+    <fragment
+        android:id="@+id/navigation_product_productsearch"
+        android:name="io.moonen.charles.greengrocery.ui.product.ProductFragment"
+        android:label="@string/title_pscan"
+        tools:layout="@layout/fragment_product_productsearch" />
+
+    <fragment
+        android:id="@+id/navigation_faq"
+        android:name="io.moonen.charles.greengrocery.ui.faqs.FaqsFragment"
+        android:label="@string/title_activity_settings"
+        tools:layout="@layout/fragment_faqs" />
 </navigation>

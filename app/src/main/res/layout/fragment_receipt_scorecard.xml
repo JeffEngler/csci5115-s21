@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="55dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-15dp">
+
+        <TextView
+            android:id="@+id/titleBar"
+            android:layout_width="0dp"
+            android:layout_height="81dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#B1EFCC"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/rvReceiptScorecard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/receiptScorecardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receipt Scorecard"
+            android:textAlignment="center"
+            android:textColor="#47525E"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/titleBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/titleBar"
+            app:layout_constraintTop_toTopOf="@+id/titleBar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReceiptScorecard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+        <TextView
+            android:id="@+id/bottomBar"
+            android:layout_width="0dp"
+            android:layout_height="115dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#B1EFCC"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/receiptGradeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="16dp"
+            android:text="Receipt Grade:"
+            android:textColor="#47525E"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/receiptScorecardNext"
+            app:layout_constraintStart_toStartOf="@+id/bottomBar" />
+
+        <TextView
+            android:id="@+id/receiptGrade"
+            android:layout_width="48dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#47525E"
+            android:text="Grade"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/receiptScorecardNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toEndOf="@+id/receiptGradeTitle" />
+
+    <TextView
+        android:id="@+id/receiptGradeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="Receipt Grade:"
+        android:textColor="#47525E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/receiptScorecardNext"
+        app:layout_constraintStart_toStartOf="@+id/bottomBar" />
+
+    <TextView
+        android:id="@+id/receiptGrade"
+        android:layout_width="48dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#47525E"
+        android:text="Grade"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/receiptScorecardNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/receiptGradeTitle" />
+
+    <Button
+        android:id="@+id/receiptScorecardNext"
+        android:layout_width="224dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#13CE66"
+        android:onClick="nav_points_earned"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:elevation="-5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="@+id/bottomBar" />
+
+    <!-- Fragment Frame -->
+    <!--<FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="303dp"
+        android:layout_height="313dp"
+        android:layout_marginBottom="208dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>-->
+
+        <!-- Fragment Frame -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="411dp"
+            android:layout_height="592dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"></FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
+/*
 package io.moonen.charles.greengrocery;
 
 import android.os.Bundle;
@@ -5,6 +6,11 @@ import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
+import android.widget.Button;
+import android.view.View;
+
+import io.moonen.charles.greengrocery.ui.faqs.FaqsFragment;
+
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -22,6 +28,19 @@ public class SettingsActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
+        Button faqsButton =  findViewById(R.id.button);
+        faqsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FaqsFragment nextFrag = new FaqsFragment();
+                getSupportFragmentManager().beginTransaction().
+                        replace(R.id.settings, nextFrag, "findThisFragment").
+                        addToBackStack(null).
+                        commit();
+            }
+
+        });
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
@@ -31,3 +50,4 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 }
+*/
